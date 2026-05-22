@@ -1,86 +1,241 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio </title>
-  <!-- Bootstrap 5 CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Comic Vintage</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
-    .hero-principal {
-      background: linear-gradient(135deg, #c2c2c2 0%, #5e8991 100%), url(https://i.pinimg.com/1200x/c8/aa/3b/c8aa3bd77c26ccfacc39ece0ee521393.jpg);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
-    .btn-personalizado {
-      padding: 15px 40px;
-      font-size: 1.5rem;
-      font-weight: bold;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-      margin: 15px;
-      width: 250px;
+
+    body{
+      min-height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+      url(https://i.pinimg.com/736x/22/96/88/229688db82a1129d14ab9ad17d575391.jpg);
+      background-size:cover;
+      background-position:center;
+      font-family:'Poppins', sans-serif;
     }
-    .btn-camila {
-      background-color: #77bbf3;
-      color: #73879b;
-      border: none;
+
+    /* NAVBAR */
+
+    .navbar{
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(4px);
+      border-bottom: 3px solid #5d6a8f;
     }
-    .btn-camila:hover {
-      background-color: #8dbafd;
-      transform: scale(1.05);
-      color: #1a2632;
+
+    .navbar-brand{
+      font-family:'Bangers', cursive;
+      font-size:2rem;
+      color:#7ba3d1 !important;
+      letter-spacing:2px;
+      text-shadow:3px 3px 0 #000;
     }
-    footer {
-      background-color: #212529;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
+
+    .nav-link{
+      color:white !important;
+      font-weight:600;
+      margin-left:15px;
+      transition:0.3s;
     }
+
+    .nav-link:hover{
+      color:#30394b !important;
+    }
+
+    /* CONTENIDO */
+
+    .hero{
+      padding:100px 20px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+
+    .comic-box{
+      max-width:800px;
+      background:#fff7dc;
+      border:6px solid black;
+      border-radius:20px;
+      padding:50px;
+      box-shadow:10px 10px 0px #000;
+      position:relative;
+    }
+
+
+    .title{
+      font-family:'Bangers', cursive;
+      font-size:4rem;
+      color:#111;
+      letter-spacing:3px;
+      margin-bottom:20px;
+      text-shadow:3px 3px 0 #565cb3;
+    }
+
+    .description{
+      font-size:1.2rem;
+      color:#222;
+      margin-bottom:35px;
+    }
+
+    /* BOTONES */
+
+    .comic-btn{
+      padding:14px 30px;
+      margin:10px;
+      border:none;
+      border-radius:12px;
+      font-weight:bold;
+      font-size:1.1rem;
+      text-transform:uppercase;
+      transition:0.3s;
+      border:4px solid black;
+      box-shadow:5px 5px 0 black;
+    }
+
+    .btn-one{
+      background:#98b8e9;
+      color:black;
+    }
+
+    .btn-two{
+      background:#4d77ff;
+      color:white;
+    }
+
+    .comic-btn:hover{
+      transform:translateY(-5px);
+      box-shadow:8px 8px 0 black;
+    }
+
+    
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      .title{
+        font-size:2.8rem;
+      }
+
+      .comic-box{
+        padding:30px;
+      }
+
+      .description{
+        font-size:1rem;
+      }
+
+    }
+
   </style>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+<main class="flex-grow-1">
+  <!-- NAVBAR -->
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Frameworks</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+      <a class="navbar-brand" href="#">
+        COMIC WORLD
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+
+      <div class="collapse navbar-collapse" id="menu">
+
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="camila.html">Camila</a></li>
-          <li class="nav-item"><a class="nav-link" href="jaz.html">Jaz</a></li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Inicio</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="genesis.html">Genesis</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="linda.html">Linda</a>
+          </li>
+
         </ul>
+
       </div>
     </div>
   </nav>
 
-  
-  <div class="hero-principal">
-    <div class="container text-center text-white">
-      <h1 class="display-3 fw-bold mb-4">Explora y Descubre</h1>
-      <div class="d-flex flex-wrap justify-content-center gap-3">
-        <a href="camila.html" class="btn btn-personalizado btn-camila">
-            Genesis
-        </a>
-      </div>
-    
+  <!-- CONTENIDO -->
+
+  <section class="hero">
+
+    <div class="comic-box">
+
+      <h1 class="title">
+        Bienvenido elige tu Destino
+      </h1>
+
+      <p class="description">
+        Explora y diviertete en cada universo
+      </p>
+
+      <!-- BOTONES -->
+
+      <a href="linda.html" class="btn comic-btn btn-one">
+        Linda Cardenas
+      </a>
+
+      <a href="genesis.html" class="btn comic-btn btn-two">
+        Genesis De la rosa
+      </a>
+
     </div>
+
+  </section>
+</main>
+<footer class="bg-black text-warning text-center py-4 border-top border-3 border-primary">
+  <div class="container">
+
+      <div class="card-footer">
+           <p class="fw-bold text-info">
+             Computación Aplicada - Proyecto Colaborativo
+          </p>
+
+           <p  class="mb-1 text-warning">
+             Linda María Cárdenas Corado - Clave 2
+           </p>
+
+           <p  class="mb-1 text-warning"> 
+             Genesis Nohemi De la Rosa Soto - Clave 4
+           </p>
+
+           <p class="mb-0 text-info">
+             Cuarto Bachillerato en Computación
+           </p>
+      </div>
   </div>
 
-  
-  <footer>
-    <div class="container">
-      <p>Linda María Fernanda Cardenas Corado - Clave 2</p>
-      <p>Genesis Nohemi De la rosa Soto - Clave 4</p>
-      <p>Computación Aplicada</p>
-      <p>Cuarto Bachillerato en Computación</p>
-    </div>
-  </footer>
+</footer>
+  <!-- Bootstrap JS -->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

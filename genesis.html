@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Comic Frameworks</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    body{
+      background: #f5e6c8;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* NAVBAR */
+
+    .navbar{
+      background: #111;
+      border-bottom: 4px solid #565cb3;
+    }
+
+    .navbar-brand{
+      font-family: 'Bangers', cursive;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      color: #565cb3 !important;
+    }
+
+    .nav-link{
+      color: white !important;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .nav-link:hover{
+      color: #565cb3 !important;
+    }
+
+    /* HERO */
+
+    .hero{
+      background:
+      linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+      url('https://i.pinimg.com/736x/cd/fe/4b/cdfe4b92a59164b0d740b5281e0342fe.jpg');
+
+      background-size: cover;
+      background-position: center;
+
+      color: white;
+      text-align: center;
+
+      padding: 90px 20px;
+
+      border-bottom: 5px solid black;
+    }
+
+    .hero h1{
+      font-family: 'Bangers', cursive;
+      font-size: 4rem;
+      letter-spacing: 3px;
+      text-shadow: 4px 4px 0 black;
+    }
+
+    .hero p{
+      font-size: 1.2rem;
+    }
+
+    /* TARJETAS */
+
+    .comic-card{
+      border: 4px solid black;
+      border-radius: 15px;
+      overflow: hidden;
+      background: white;
+      transition: .3s;
+      box-shadow: 8px 8px 0 black;
+      height: 100%;
+    }
+
+    .comic-card:hover{
+      transform: translateY(-8px);
+    }
+
+    .comic-card img{
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .comic-card .card-body{
+      padding: 20px;
+    }
+
+    .comic-card h5{
+      font-family: 'Bangers', cursive;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    /* BOTONES */
+
+    .comic-btn{
+      border: 3px solid black;
+      font-weight: bold;
+      box-shadow: 4px 4px 0 black;
+      transition: .3s;
+    }
+
+    .comic-btn:hover{
+      transform: scale(1.05);
+    }
+
+    /* FOOTER */
+
+    footer{
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 18px;
+      margin-top: 60px;
+      border-top: 4px #565cb3;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+
+    <div class="container">
+
+      <a class="navbar-brand" href="#">
+        COMICVERSE
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Inicio</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <h1>
+        BIENVENIDO AL MULTIVERSO DE BATMAN
+      </h1>
+
+      <p>
+        Descubre mundos inspirados en cómics vintage, héroes y aventuras épicas.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- TARJETAS -->
+
+  <div class="container py-5">
+
+    <div class="row g-4">
+
+      <!-- CARD 1 -->
+
+      <div class="col-md-4">
+
+        <div class="comic-card">
+
+        <img src="imagenes/descargar (8).jpeg" class="w-100" alt="">
+
+          <div class="card-body text-center">
+
+            <h5>HÉROES</h5>
+
+            <p>
+              Batman no posee superpoderes.
+              Su inteligencia, entrenamiento y tecnología
+              lo convirtieron en el protector de Gotham.
+            </p>
+           
+            <p>
+              Bruce Wayne entrenó alrededor del mundo
+              para convertirse en el vigilante más temido
+              de Gotham City.
+            </p>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="col-md-4">
+
+        <div class="comic-card">
+
+          <img src="imagenes/batman.jpeg" class="w-100" alt="">
+
+          <div class="card-body text-center">
+
+            <h5>VILLANOS</h5>
+
+            <p>
+              El Joker no tiene un origen oficial confirmado.
+              Eso lo convierte en uno de los villanos
+              más misteriosos de DC Comics.
+            </p>
+
+            <p>
+              Bane fue uno de los pocos enemigos
+              capaces de derrotar físicamente a Batman
+              y romperle la espalda.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="col-md-4">
+
+        <div class="comic-card">
+
+          <img src="imagenes/descargar (9).jpeg" class="w-100" alt="">
+
+          <div class="card-body text-center">
+
+            <h5>AVENTURAS</h5>
+
+            <p>
+              Batman ha viajado por múltiples universos,
+              enfrentando versiones alternativas de sí mismo
+              y amenazas del multiverso.
+            </p>
+
+            <p>
+              Gotham City está inspirada en ciudades reales
+              como Nueva York y Chicago,
+              pero con un estilo mucho más oscuro.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+  </footer>
+
+  <!-- Bootstrap JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
